@@ -1,6 +1,26 @@
 <template>
   <div>
-    <nuxt />
+    <b-container fluid>
+      <b-navbar toggleable="lg" type="dark" variant="info" fixed="true">
+      <b-navbar-nav fill justified>
+        <b-navbar-brand href="/members">Members</b-navbar-brand>
+        <b-navbar-brand href="/stats">Stats</b-navbar-brand>
+        <b-navbar-brand href="/">Home</b-navbar-brand>
+        <b-navbar-brand href="/articles">Articles</b-navbar-brand>
+        <b-navbar-brand href="/podcasts">Podcasts</b-navbar-brand>
+      </b-navbar-nav>
+      </b-navbar>
+      <nuxt />
+      <b-nav  pills tabs justified align="center">
+        <b-nav-item active href="/members">Members</b-nav-item>
+        <b-nav-item href="/stats">Stats</b-nav-item>
+        <b-nav-item href="/">Home</b-nav-item>
+        <b-nav-item hred="articles">Articles</b-nav-item>
+        <b-nav-item href="podcasts">Podcast</b-nav-item>
+      </b-nav>
+    </b-container>
+    
+
   </div>
 </template>
 
