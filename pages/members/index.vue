@@ -23,7 +23,7 @@ export default {
     },
     computed: {
         ...mapState({
-            members: 'members_index'
+            members: 'member_index'
         })
     }
 }

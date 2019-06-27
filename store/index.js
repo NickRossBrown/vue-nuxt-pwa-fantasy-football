@@ -24,11 +24,11 @@ const getters = {
 
 const mutations = {
 
-    setArticlesIndex(state, articles) {
-        state.loadedArticles = articles
+    setArticleIndex(state, articles) {
+        state.article_index = articles
     },
     setArticleShow(state, payload) {
-        const articleObject = state.loadedArticles.find(
+        const articleObject = state.article_index.find(
             x => x.article_id == payload
         );
         return state.pageArticle = articleObject
@@ -37,7 +37,7 @@ const mutations = {
         state.podcast_index = payload
     },
     setMemberIndex(state, payload) {
-        state.members_index = payload
+        state.member_index = payload
     },
 }
 
@@ -58,7 +58,7 @@ const actions = {
                 'https://django-cms-api.herokuapp.com/api/v2/pages/?type=callyourmoms.MemberDetailPage&fields=*'
             )
             .then(res => {
-                console.log(res.data.items)
+                // console.log(res.data.items)
                 const loadedMembers = res.data.items || []
                 vuexContext.commit('setMemberIndex', loadedMembers)
             })
@@ -70,7 +70,7 @@ const actions = {
                 'https://django-cms-api.herokuapp.com/api/v2/pages/?type=callyourmoms.PodcastDetailPage&fields=*'
             )
             .then(res => {
-                console.log(res.data.items)
+                // console.log(res.data.items)
                 const loadedPodcasts = res.data.items || []
                 vuexContext.commit('setPodcastIndex', loadedPodcasts)
             })
@@ -81,8 +81,9 @@ const actions = {
             .get('https://django-cms-api.herokuapp.com/api/v2/pages/?type=callyourmoms.ArticleDetailPage&fields=*'
             )
             .then(res => {
+                console.log(res.data.items)
                 let articlesArray = res.data.items || []
-                vuexContext.commit('setArticles', articlesArray)
+                vuexContext.commit('setArticleIndex', articlesArray)
             })
             .catch(e => context.error(e))
     },

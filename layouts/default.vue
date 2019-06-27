@@ -1,15 +1,7 @@
 <template>
-  <div>
+  <div class="page-root">
+    <NavBar />
     <b-container fluid>
-      <b-navbar toggleable="lg" type="dark" variant="info" fixed="true">
-      <b-navbar-nav fill justified>
-        <b-navbar-brand href="/members">Members</b-navbar-brand>
-        <b-navbar-brand href="/stats">Stats</b-navbar-brand>
-        <b-navbar-brand href="/">Home</b-navbar-brand>
-        <b-navbar-brand href="/articles">Articles</b-navbar-brand>
-        <b-navbar-brand href="/podcasts">Podcasts</b-navbar-brand>
-      </b-navbar-nav>
-      </b-navbar>
       <nuxt />
       <b-nav  pills tabs justified align="center">
         <b-nav-item active href="/members">Members</b-nav-item>
@@ -23,6 +15,16 @@
 
   </div>
 </template>
+
+<script>
+import NavBar from "~/components/NavBar.vue"
+export default {
+  components: {
+    NavBar
+  }
+}
+</script>
+
 
 <style>
 html {
@@ -71,5 +73,9 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.page-root {
+    background: linear-gradient(#fbfbfb, #fbfbfb);
 }
 </style>
