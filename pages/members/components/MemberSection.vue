@@ -28,14 +28,13 @@
             <b-col cols="12" md="6">
                 
                 <h2>{{member.name}} </h2>
-                <div
-                    v-for="(text,index) in member.content" 
+                <b-card>
+                    <b-card-text v-for="(text,index) in member.content" 
                     :key="index"
-                    :index="index" 
-                >
-                    <p v-html="text.value"></p>
-
-                </div>
+                    :index="index" >
+                        <span v-html="text.value"></span>
+                    </b-card-text>
+                </b-card>
             </b-col>
         </b-row>
 </template>

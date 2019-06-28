@@ -1,18 +1,24 @@
 import axios from 'axios';
 
-const state = {
+export const state = () => ({
     article_index: [],
     article_show: {},
     podcast_index: [],
     member_index: [],
-}
+})
 
 const getters = {
     getArticles(state) {
         return state.article_index
     },
-    getArticle(state) {
-        return state.article_show
+    getArticle(state, payload) {
+        const articleObject = state.article_index.find(
+            x => x.article_id == payload
+        )
+        return articleObject
+    },
+    getArticleById: (state) => (id) => {
+        return state.article_index.filter((article) => article.id == id)
     },
     getPodcasts(state) {
         return state.podcast_index

@@ -3,13 +3,7 @@
     <NavBar />
     <b-container fluid>
       <nuxt />
-      <b-nav  pills tabs justified align="center">
-        <b-nav-item active href="/members">Members</b-nav-item>
-        <b-nav-item href="/stats">Stats</b-nav-item>
-        <b-nav-item href="/">Home</b-nav-item>
-        <b-nav-item hred="articles">Articles</b-nav-item>
-        <b-nav-item href="podcasts">Podcast</b-nav-item>
-      </b-nav>
+
     </b-container>
     
 
@@ -76,6 +70,6 @@ html {
 }
 
 .page-root {
-    background: linear-gradient(#fbfbfb, #fbfbfb);
+    background: linear-gradient (#fbfbfb,#eeeeee );
 }
 </style>

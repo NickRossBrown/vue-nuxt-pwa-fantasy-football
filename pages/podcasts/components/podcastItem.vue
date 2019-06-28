@@ -54,7 +54,7 @@ export default {
 .podcast_item {
   transform: translateY(0);
   box-shadow: 0 0 0 rgba(93, 93, 93, 0.16);
-  background: linear-gradient(#fbfbfb, #fbfbfb);
+  background-color: #fff;
   transition: all 0.3s ease;
   color: black;
   text-decoration: none;

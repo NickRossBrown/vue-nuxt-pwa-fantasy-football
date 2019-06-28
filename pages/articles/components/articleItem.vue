@@ -41,7 +41,7 @@ export default {
     },
     methods: {
 		loadMember() {
-			this.$router.push('/articles/2')
+			this.$router.push('/articles/'+ this.article.id)
 		}
 	}
 }
