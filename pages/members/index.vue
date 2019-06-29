@@ -1,7 +1,6 @@
 <template>
     <div>
-        <PageHero></PageHero>
-        <h1>Member Page</h1>
+        <PageHero>League Members</PageHero>
         <div
         v-for="(person,index) in members" 
         :key="index"
@@ -9,7 +8,10 @@
         >
             <MemberSection
             :member="person"
-            ></MemberSection>
+            :class="[index % 2 === 0 ? 'alternate-theme' : 'normal-theme']"
+            :alternate="[index % 2 === 0 ? true : false]"
+            >
+            </MemberSection>
         </div>
         <PageFooter></PageFooter>
     </div>

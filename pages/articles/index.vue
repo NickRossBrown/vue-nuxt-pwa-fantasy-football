@@ -1,7 +1,6 @@
 <template>
     <div class="articleIndex">
-        <PageHero></PageHero>
-        <h1>Articles Page</h1>
+        <PageHero>League Articles</PageHero>
         <ArticleList></ArticleList>
         <PageFooter></PageFooter>
     </div>

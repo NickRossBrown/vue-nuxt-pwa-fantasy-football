@@ -6,7 +6,6 @@
         <div
             v-for="(article, index) in articles"
             :key="index"
-            
         >
             <ArticleItem
                 :article="article"

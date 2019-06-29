@@ -70,6 +70,6 @@ html {
 }
 
 .page-root {
-    background: linear-gradient (#fbfbfb,#eeeeee );
+  background: linear-gradient (#fbfbfb,#eeeeee );
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
-    <div >
+    <section class="podcast-page">
         <PageHero>Fantasy Podcasts</PageHero>
         <PodcastList ></PodcastList>
         <PageFooter></PageFooter>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -20,5 +20,7 @@ export default {
 </script>
 
 <style scoped>
-
+.podcast-page{
+    background: rgb(245, 245, 245)
+}
 </style>

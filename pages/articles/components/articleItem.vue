@@ -2,7 +2,7 @@
     <div>
         <b-card no-body class="overflow-hidden mt-1 list_item" @click="loadMember">
             <b-row no-gutters align-v="center">
-            <b-col cols="12" md="2" class="m-2">
+            <b-col cols="12" md="2" class="m-2 text-center">
                 <b-card-img-lazy
                     :src="article.thumbnail_image.meta.download_url" 
                     v-bind="imgProps"
@@ -63,4 +63,5 @@ export default {
   background: linear-gradient(90deg, #2fe0c5, #3bdcc4, #2fe0c5);
   color: #fff;
 }
+
 </style>

@@ -11,14 +11,9 @@ const getters = {
     getArticles(state) {
         return state.article_index
     },
-    getArticle(state, payload) {
-        const articleObject = state.article_index.find(
-            x => x.article_id == payload
-        )
-        return articleObject
-    },
     getArticleById: (state) => (id) => {
-        return state.article_index.filter((article) => article.id == id)
+        const article = state.article_index.filter((article) => article.id == id)
+        return article[0]
     },
     getPodcasts(state) {
         return state.podcast_index
@@ -29,7 +24,6 @@ const getters = {
 };
 
 const mutations = {
-
     setArticleIndex(state, articles) {
         state.article_index = articles
     },
@@ -64,7 +58,6 @@ const actions = {
                 'https://django-cms-api.herokuapp.com/api/v2/pages/?type=callyourmoms.MemberDetailPage&fields=*'
             )
             .then(res => {
-                // console.log(res.data.items)
                 const loadedMembers = res.data.items || []
                 vuexContext.commit('setMemberIndex', loadedMembers)
             })
@@ -76,7 +69,6 @@ const actions = {
                 'https://django-cms-api.herokuapp.com/api/v2/pages/?type=callyourmoms.PodcastDetailPage&fields=*'
             )
             .then(res => {
-                // console.log(res.data.items)
                 const loadedPodcasts = res.data.items || []
                 vuexContext.commit('setPodcastIndex', loadedPodcasts)
             })
@@ -87,7 +79,6 @@ const actions = {
             .get('https://django-cms-api.herokuapp.com/api/v2/pages/?type=callyourmoms.ArticleDetailPage&fields=*'
             )
             .then(res => {
-                console.log(res.data.items)
                 let articlesArray = res.data.items || []
                 vuexContext.commit('setArticleIndex', articlesArray)
             })
