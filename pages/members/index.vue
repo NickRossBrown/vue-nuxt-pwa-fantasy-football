@@ -1,6 +1,6 @@
 <template>
     <div>
-        <PageHero>League Members</PageHero>
+        <PageHero :style="{backgroundImage: `url(${require('../../assets/banners/members.jpg')})`}" >League Members</PageHero>
         <div
         v-for="(person,index) in members" 
         :key="index"
@@ -13,7 +13,7 @@
             >
             </MemberSection>
         </div>
-        <PageFooter></PageFooter>
+        <PageFooter :style="{backgroundImage: `url(${require('../../assets/banners/members.jpg')})`}"></PageFooter>
     </div>
 </template>
 
