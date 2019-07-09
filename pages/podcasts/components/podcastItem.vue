@@ -10,7 +10,6 @@
             class="podcast_item"
         >
             <b-card-text>
-                Some quick text to build on the card title and make up the bulk of the card's content.Some quick text to build on the card title and make up the bulk of the card's content.
                 {{ podcast.description }}
             </b-card-text>
             <b-card-group>

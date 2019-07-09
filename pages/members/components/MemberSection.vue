@@ -4,7 +4,7 @@
             <b-card
                 no-body
                 style="max-width: 20rem;"
-                img-src="https://placekitten.com/275/275"
+                :img-src="member.profile_image.meta.download_url"
                 img-alt="Image"
                 img-top
                 align="center"
@@ -23,6 +23,7 @@
                 :key="index"
                 :index="index" >
                     <span v-html="text.value"></span>
+                    <p>{{ member.profile_image.meta.download_url }}</p>
                 </b-card-text>
             </b-card>
         </b-col>

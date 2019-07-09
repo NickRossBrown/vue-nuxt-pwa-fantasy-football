@@ -1,6 +1,6 @@
 <template>
     <div class="article-page">
-        <PageHero class="mb5"></PageHero>
+        <PageHero :style="{backgroundImage: `url(${require('../../../assets/banners/article-1.png')})`}"></PageHero>
         <b-row>
             <b-col cols="12" md="8" offset-md="2">
                 <b-card border-variant="light" class="content-card">
@@ -13,7 +13,7 @@
                 </b-card>
             </b-col>
         </b-row>
-        <PageFooter></PageFooter>
+        <PageFooter :style="{backgroundImage: `url(${require('../../../assets/banners/article-1.png')})`}"></PageFooter>
     </div>
 </template>
 
@@ -60,5 +60,6 @@ export default {
 }
 .article-page {
     background: rgb(250, 250, 250);
+    min-height: 100vh;
 }
 </style>

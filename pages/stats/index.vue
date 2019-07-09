@@ -1,10 +1,10 @@
 <template>
   <div>
-    <PageHero>Stats</PageHero>
+    <PageHero :style="{backgroundImage: `url(${require('../../assets/banners/stats-2.jpg')})`}">Stats</PageHero>
     <section class="container">
      
     </section>
-    <PageFooter></PageFooter>
+    <PageFooter :style="{backgroundImage: `url(${require('../../assets/banners/stats-2.jpg')})`}"></PageFooter>
   </div>
 </template>
 

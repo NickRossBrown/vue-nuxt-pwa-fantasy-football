@@ -1,8 +1,8 @@
 <template>
     <section class="podcast-page">
-        <PageHero>Fantasy Podcasts</PageHero>
+        <PageHero :style="{backgroundImage: `url(${require('../../assets/banners/podcast-1.png')})`}">Fantasy Podcasts</PageHero>
         <PodcastList ></PodcastList>
-        <PageFooter></PageFooter>
+        <PageFooter :style="{backgroundImage: `url(${require('../../assets/banners/podcast-1.png')})`}"></PageFooter>
     </section>
 </template>
 

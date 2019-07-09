@@ -1,8 +1,8 @@
 <template>
     <div class="articleIndex">
-        <PageHero>League Articles</PageHero>
+        <PageHero :style="{backgroundImage: `url(${require('../../assets/banners/article-1.png')})`}">League Articles</PageHero>
         <ArticleList></ArticleList>
-        <PageFooter></PageFooter>
+        <PageFooter :style="{backgroundImage: `url(${require('../../assets/banners/article-1.png')})`}"></PageFooter>
     </div>
 </template>
 

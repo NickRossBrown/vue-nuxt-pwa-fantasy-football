@@ -1,7 +1,7 @@
 <template>
-<div>
-    <section class="page-footber">
-        <div class="page-footer">
+<div class="page-footer">
+    <section>
+        <div >
             <slot />
         </div>
     </section>
@@ -17,11 +17,11 @@ export default {
 
 <style scoped>
 
-.page-footber {
-    height: 25vh;
+.page-footer {
+    height: 15vh;
     background-size: cover;
-    background-image: linear-gradient( to right bottom, rgba(126, 213, 111, .3), rgba(40,180, 131, 0.3)), url(../assets/images/hero-foobtall.jpg);
-    background-position: bottom;
+    background-image: linear-gradient( to right bottom, rgba(126, 213, 111, .3), rgba(40,180, 131, 0.3)), url(../assets/banners/members.jpg);
+    background-position: top;
     clip-path: polygon(67% 0, 100% 13%, 100% 100%, 0 100%, 0 13%);
     margin-top: 20px
 }
