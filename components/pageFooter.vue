@@ -18,7 +18,7 @@ export default {
 <style scoped>
 
 .page-footer {
-    height: 25vh;
+    height: 15vh;
     background-size: cover;
     background-image: linear-gradient( to right bottom, rgba(126, 213, 111, .3), rgba(40,180, 131, 0.3)), url(../assets/banners/members.jpg);
     background-position: top;

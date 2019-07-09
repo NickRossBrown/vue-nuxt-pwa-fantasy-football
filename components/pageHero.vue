@@ -24,10 +24,8 @@ export default {
 <style scoped>
 
 .page-hero {
-    height: 35vh;
+    height: 25vh;
     background-size: cover;
-    /* background-image: linear-gradient( to right bottom, rgba(63, 189, 41, 0.673), rgba(40,180, 131, 0.3)); */
-    /* background-image: linear-gradient( to right bottom, rgba(126, 213, 111, .3), rgba(40,180, 131, 0.3)), url(../assets/banners/members.jpg); */
     background-image: linear-gradient( to right bottom, rgba(126, 213, 111, .3), rgba(40,180, 131, 0.3)), url(../assets/banners/default-1.jpg);
     background-position: bottom;
     clip-path: polygon(33% 100%, 100% 87%, 100% 0, 0 0, 0 87%);
