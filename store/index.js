@@ -55,7 +55,7 @@ const actions = {
     async membersApiCall(vuexContext, context) {
         await axios
             .get(
-                'https://django-cms-api.herokuapp.com/api/v2/pages/?type=callyourmoms.MemberDetailPage&fields=*'
+                'https://callyourmoms-api.herokuapp.com/api/v2/pages/?type=callyourmoms.MemberDetailPage&fields=*'
             )
             .then(res => {
                 const loadedMembers = res.data.items || []
@@ -66,7 +66,7 @@ const actions = {
     async podcastsApiCall(vuexContext, context) {
         await axios
             .get(
-                'https://django-cms-api.herokuapp.com/api/v2/pages/?type=callyourmoms.PodcastDetailPage&fields=*'
+                'https://callyourmoms-api.herokuapp.com/api/v2/pages/?type=callyourmoms.PodcastDetailPage&fields=*'
             )
             .then(res => {
                 const loadedPodcasts = res.data.items || []
@@ -76,7 +76,7 @@ const actions = {
     },
     async articlesApiCall(vuexContext, context) {
         await axios
-            .get('https://django-cms-api.herokuapp.com/api/v2/pages/?type=callyourmoms.ArticleDetailPage&fields=*'
+            .get('https://callyourmoms-api.herokuapp.com/api/v2/pages/?type=callyourmoms.ArticleDetailPage&fields=*'
             )
             .then(res => {
                 let articlesArray = res.data.items || []
